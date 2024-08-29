@@ -18,7 +18,7 @@ langchain-openai = "^0.1.23"
 langchain-experimental = "^0.0.64"
 pypdf = "^4.3.1"
 ragas = "^0.1.15"
-unstructured = {extras = ["md"], version = "^0.15.8"}
+unstructured = {extras = ["pdf"], version = "^0.15.8"}
 libmagic = "^1.0"
 python-magic = "^0.4.27"
 
