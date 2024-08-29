@@ -31,7 +31,8 @@ class RAGAgent:
 
     def create_RAG_tool(self): 
         name = "RAG Tool"
-        description = "Search and retrieve data from the documents provided by the user."
+        description = """Search and retrieve data from the documents provided by the user.
+        Input should be JSON in the following format: {{"query": "<input_query>}}"""
 
         return create_retriever_tool(self.load_data(), name, description)
 

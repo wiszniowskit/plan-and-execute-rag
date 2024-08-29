@@ -34,7 +34,7 @@ def generate_response(prompt_input, doc_path="/Users/tomasz/plan-and-execute-rag
     tools = [rag_tool]
     
     
-    executor = load_agent_executor(model, tools)
+    executor = load_agent_executor(model, tools, verbose=True)
     
     agent = PlanAndExecute(planner=planner, executor=executor, verbose=True)
     
@@ -44,7 +44,7 @@ def generate_response(prompt_input, doc_path="/Users/tomasz/plan-and-execute-rag
     return response["output"]
 
 
-if prompt := st.chat_input("What's the Tesla's approach to Cybersecurity and  Data Privacy?"):
+if prompt := st.chat_input("What's the Tesla's approach to Cybersecurity and  Data Privacy?", ):
     with st.chat_message("user"):
         st.markdown(prompt)
 
